@@ -10,12 +10,7 @@ public class Player : MonoBehaviour
     // public float slideDuration = 0.5f;
     private bool isGrounded = true;
     private bool isSliding = false;
-
-
-    // private void Awake()
-    // {
-    //     throw new NotImplementedException();
-    // }
+    
     
 
     // Update is called once per frame
@@ -28,22 +23,8 @@ public class Player : MonoBehaviour
         {
             playerRb.linearVelocity = new Vector2(playerRb.linearVelocity.x, jumpForce);
         }
-
-        // Touch and hold for slide
-        // if (Input.GetMouseButton(1) && isGrounded && !isSliding)
-        // {
-        //     StartCoroutine(SlideCoroutine());
-        // }
     }
-    
-    // IEnumerator SlideCoroutine()
-    // {
-    //     isSliding = true;
-    //     // Slide animation or scale down can be added here
-    //     yield return new WaitForSeconds(slideDuration);
-    //     isSliding = false;
-    // }
-    
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
